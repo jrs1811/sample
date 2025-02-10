@@ -1,0 +1,19 @@
+.hidden {
+    display: none;
+}
+
+#jumpscare {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#jumpscare img {
+    width: 100%;
+}
