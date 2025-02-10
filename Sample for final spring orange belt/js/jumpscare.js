@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const scareButton = document.getElementById("scareButton");
+    const resetButton = document.getElementById("resetButton");
     const jumpscare = document.getElementById("jumpscare");
     const scream = document.getElementById("scream");
 
@@ -21,5 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
         scareButton.textContent = "Already Scared!";
         scareButton.disabled = true;
         localStorage.setItem("jumpscareShown", "true");
+    });
+
+    // Reset button functionality
+    resetButton.addEventListener("click", () => {
+        localStorage.removeItem("jumpscareShown");
+        scareButton.textContent = "Click Me";
+        scareButton.disabled = false;
+        jumpscare.classList.add("hidden"); // Hide the jumpscare again
+        //pause the audio once you reset
+        scream.pause();
+        scream.currentTime = 0;
     });
 });

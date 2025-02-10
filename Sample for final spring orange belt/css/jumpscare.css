@@ -1,19 +1,61 @@
-.hidden {
-    display: none;
+/* General Page Styling */
+body {
+    font-family: 'Creepster', cursive, Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
+/* Jumpscare Container */
 #jumpscare {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
-    background: black;
-    padding: 20px;
+    width: 350px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 25px;
     text-align: center;
     border-radius: 10px;
+    box-shadow: 0 0 20px red;
+    animation: flicker 1.5s infinite alternate;
 }
 
+/* Jumpscare Image */
 #jumpscare img {
     width: 100%;
+    border-radius: 8px;
+    filter: brightness(0.8) contrast(1.2);
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Button Styling */
+button {
+    background: red;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: darkred;
+    box-shadow: 0 0 15px red;
+}
+
+/* Scary Flicker Effect */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
 }
